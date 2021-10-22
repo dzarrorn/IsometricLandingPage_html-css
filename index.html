@@ -4,7 +4,67 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <!-- header section starts -->
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">home</a></li>
+          <li><a href="#">about</a></li>
+          <li><a href="#">cart</a></li>
+          <li><a href="#">categories</a></li>
+          <li><a href="#">login</a></li>
+        </ul>
+      </nav>
+      <div class="fas fa-bars"></div>
+    </header>
+    <!-- header section ends -->
+
+    <!-- home section starts -->
+    <section id="home">
+      <div class="content">
+        <h2>online</h2>
+        <h1>shopping</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam,
+          explicabo veritatis laboriosam qui accusamus magni neque perferendis
+          nisi dolor possimus!
+        </p>
+        <a href="#"
+          ><button>shop now <i class="fas fa-shopping-cart"></i></button
+        ></a>
+        <div class="icons">
+          <a href="#" class="fab fa-facebook-f"></a>
+          <a href="#" class="fab fa-twitter"></a>
+          <a href="#" class="fab fa-instagram"></a>
+        </div>
+      </div>
+      <div class="image">
+        <img src="images/ilustration.png" alt="" />
+      </div>
+    </section>
+
+    <!-- home section ends -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".fa-bars").click(function () {
+          $(this).toggleClass("fa-times");
+          $("nav").slideToggle();
+        });
+      });
+
+      $("nav").click(function () {
+        $(".fa-bars").removeClass("fa-times");
+        $(this).slideUp();
+      });
+    </script>
+  </body>
 </html>
